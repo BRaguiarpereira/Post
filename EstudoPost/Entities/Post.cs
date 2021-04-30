@@ -37,6 +37,7 @@ namespace EstudoPost.Entities
 
         public override string ToString()
         {
+            // Utilização do stringBuilder para mostrar os dados convertendo-os pra string
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(Title);
             sb.Append(Likes);
@@ -44,7 +45,7 @@ namespace EstudoPost.Entities
             sb.AppendLine(Moment.ToString("dd/MM/yyyy HH:mm:ss"));
             sb.AppendLine(Content);
             sb.AppendLine("Comments :");
-
+            // Criando um foreach para percorrer os comentarios
             foreach (Comment c in Comments)
             {
                 sb.AppendLine(c.Text);
